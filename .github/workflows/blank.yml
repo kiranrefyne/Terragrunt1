@@ -58,3 +58,4 @@ jobs:
         terragrunt init
 
         terragrunt apply -auto-approve
+        
