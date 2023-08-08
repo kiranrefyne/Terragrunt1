@@ -3,7 +3,7 @@ name: Deploy VPC with Terragrunt
 
 on:
 
-  push:
+  push:       # triggers on push events to main branch
 
     branches:
 
@@ -35,10 +35,10 @@ jobs:
 
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-        aws-region: ap-south-1 # Replace with your desired AWS region
+        aws-region: ap-south-1 # can be replaced with desired region
 
 
-    - name: Install Terragrunt
+    - name: Install Terragrunt    #installation of terragrunt on ubuntu machine
 
       run: |
 
@@ -55,6 +55,6 @@ jobs:
 
         cd DEV/VPC
 
-        terragrunt init
+        terragrunt init        #initialization of terragrunt
 
-        terragrunt destroy -auto-approve
+        terragrunt apply -auto-approve        #Different commands can be passed. 
