@@ -57,4 +57,4 @@ jobs:
 
         terragrunt init
 
-        terragrunt destroy auto-approve
+        terragrunt destroy -auto-approve
