@@ -42,13 +42,15 @@ jobs:
     - name: Terragrunt Init
       run: terragrunt init --terragrunt-non-interactive
       env:
-        UAT: ${{ secrets.UAT }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key  }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_key}}
 
     # Generates an execution plan for Terragrunt
     - name: Terragrunt Plan
       run: terragrunt run-all plan --terragrunt-non-interactive
       env:
-        UAT: ${{ secrets.UAT }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key  }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_key}}
 
       # On push to main, build or change infrastructure according to Terragrunt configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terragrunt Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
@@ -56,6 +58,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terragrunt run-all apply --terragrunt-non-interactive
       env:
-        UAT: ${{ secrets.UAT }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key  }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_key}}
 
         
