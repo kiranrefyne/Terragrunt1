@@ -9,7 +9,7 @@ on:
 jobs:
   Terragrunt:
     name: 'Terragrunt'
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
