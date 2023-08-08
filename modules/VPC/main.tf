@@ -1,3 +1,7 @@
+provider "aws" {
+  
+}
+
 /*==== The VPC ======*/
 resource "aws_vpc" "Refyne-UAT-VPC" {
   cidr_block           = var.vpc_cidr
