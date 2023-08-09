@@ -57,4 +57,4 @@ jobs:
 
         terragrunt init        #initialization of terragrunt
 
-        terragrunt apply -auto-approve        #Different commands can be passed. 
+        terragrunt destroy -auto-approve        #Different commands can be passed. 
