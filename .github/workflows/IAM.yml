@@ -10,12 +10,12 @@ on:
 
       - main
     paths:
-        - DEV
+        - DEV/IAM
 
 
 jobs:
 
-  deploy_vpc:
+  deploy_IAM:
 
     runs-on: ubuntu-latest
 
@@ -60,4 +60,4 @@ jobs:
 
         terragrunt init        #initialization of terragrunt
 
-        terragrunt destroy -auto-approve        #Different commands can be passed. 
+        terragrunt apply -auto-approve        #Different commands can be passed. 
