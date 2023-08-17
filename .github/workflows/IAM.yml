@@ -1,4 +1,4 @@
-name: Deploy VPC with Terragrunt
+name: Deploy IAM with Terragrunt
 
 
 on:
