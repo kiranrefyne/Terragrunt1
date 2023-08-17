@@ -4,11 +4,7 @@ name: Deploy VPC with Terragrunt
 on:
 
   push:
-    paths: 
-      - DEV/IAM
-      - DEV/ElasticBeanstalk
-      - modules/IAM
-      - modules/ElasticBeanstalk       # triggers on push events to main branch
+         # triggers on push events to main branch
 
     branches:
 
