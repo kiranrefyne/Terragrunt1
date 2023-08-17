@@ -2,6 +2,7 @@ name: 'Terragrunt CI'
 
 on:
   push:
+    
     branches:
     - main
   pull_request:
