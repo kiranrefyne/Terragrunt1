@@ -9,7 +9,8 @@ on:
     branches:
 
       - main
-    
+    paths:
+        - DEV
 
 
 jobs:
