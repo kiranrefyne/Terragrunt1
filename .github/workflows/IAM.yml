@@ -56,7 +56,7 @@ jobs:
 
       run: |
 
-        cd DEV/VPC
+        cd DEV/IAM
 
         terragrunt init        #initialization of terragrunt
 
